@@ -1,0 +1,134 @@
+/* ========== СТИЛИ ДЛЯ СТРАНИЦЫ МЕНЮ ========== */
+
+/* Секция с блюдами */
+.menu-section {
+    margin: 40px 0;
+}
+
+.menu-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* GRID: Сетка с блюдами (3 колонки) */
+.dishes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки одинаковой ширины */
+    gap: 10px; /* Отступ между карточками */
+}
+
+/* FLEXBOX: Карточка каждого блюда */
+.dish-card {
+    display: flex;
+    flex-direction: column; /* Элементы идут сверху вниз */
+    padding: 30px 40px; /* Внутренние отступы */
+    border-radius: 35px; /* Скругление углов */
+    background-color: white; /* Белый фон */
+    border: 2px solid transparent;
+    cursor: pointer; /* Курсор-указатель при наведении */
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13)); /* Тень */
+    transition: all 0.3s ease; /* Плавный переход для всех свойств */
+}
+
+/* Hover-эффект: бордер вокруг карточки */
+.dish-card:hover {
+    border: 2px solid tomato;
+}
+
+/* Hover-эффект: изменение цвета кнопки внутри карточки */
+.dish-card:hover button {
+    background-color: tomato;
+    color: white;
+}
+
+/* Изображение блюда */
+.dish-card img {
+    width: 100%; /* На всю ширину контейнера */
+    height: 200px; /* Фиксированная высота */
+    object-fit: cover; /* Обрезка под размер */
+    border-radius: 35px; /* Скругление */
+    margin-bottom: 15px;
+}
+
+/* Цена блюда */
+.dish-price {
+    font-size: 24px; /* Увеличенный шрифт */
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0 5px 0;
+}
+
+/* Название блюда */
+.dish-name {
+    font-size: 18px; /* Увеличенный шрифт */
+    color: #333;
+    margin: 5px 0;
+    flex-grow: 1; /* Растягивается, чтобы кнопка была внизу */
+}
+
+/* Вес/объём блюда */
+.dish-weight {
+    font-size: 14px;
+    color: #888; /* Серый цвет */
+    margin: 5px 0 15px 0;
+}
+
+/* Кнопка "Добавить" */
+.dish-card button {
+    background-color: #f1eee9; /* Светло-бежевый фон */
+    border: none; /* Убираем бордер */
+    padding: 10px 30px; /* Внутренние отступы */
+    border-radius: 10px; /* Скругление */
+    cursor: pointer; /* Курсор-указатель */
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: auto; /* Прижимается к низу карточки */
+    transition: all 0.3s ease; /* Плавный переход */
+}
+
+.dish-card button:hover {
+    background-color: tomato;
+    color: white;
+}
+
+/* ========== АДАПТИВНОСТЬ ДЛЯ ПЛАНШЕТОВ (≤800px) ========== */
+@media (max-width: 800px) {
+    /* Grid: 2 колонки */
+    .dishes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Меню выравнивается по ширине */
+    nav {
+        justify-content: space-between;
+    }
+}
+
+/* ========== АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ (≤600px) ========== */
+@media (max-width: 600px) {
+    /* Главный заголовок по центру */
+    header h1 {
+        text-align: center;
+    }
+    
+    /* Меню вертикальное */
+    nav {
+        flex-direction: column; /* Элементы идут сверху вниз */
+        align-items: center; /* Выравнивание по центру поперечной оси */
+    }
+    
+    nav a {
+        font-size: 22px; /* Увеличиваем шрифт на 4px */
+    }
+    
+    /* Заголовки секций по центру */
+    .menu-section h2 {
+        text-align: center;
+    }
+    
+    /* Grid: 1 колонка */
+    .dishes-grid {
+        grid-template-columns: 1fr;
+    }
+}
