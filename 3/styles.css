@@ -1,0 +1,207 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Минимальная высота = высота экрана */
+}
+
+header {
+    padding: 20px 40px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin: 0 0 20px 0;
+    font-size: 36px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: black;
+}
+
+nav a:hover {
+    color: tomato;
+}
+
+#active {
+    color: tomato;
+}
+
+main {
+    padding: 0 40px;
+    margin-bottom: 40px;
+    flex: 1;
+}
+
+.about img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.about h2 {
+    font-size: 28px;
+    margin: 20px 0;
+    color: #333;
+}
+
+.about p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.advantages {
+    margin: 40px 0;
+}
+
+.advantages h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.advantages ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.advantages li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.popular-dishes {
+    margin: 40px 0;
+}
+
+.popular-dishes h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #f5f5f5;
+    font-size: 16px;
+    color: #333;
+}
+
+table td {
+    font-size: 15px;
+    color: #555;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 30px 40px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+footer a:hover {
+    color: tomato;
+}
+
+/* ========== АДАПТИВНОСТЬ ДЛЯ ПЛАНШЕТОВ (≤800px) ========== */
+@media (max-width: 800px) {
+    /* Изображение уменьшается */
+    .about img {
+        width: 500px;
+        height: auto;
+    }
+    
+    /* Меню выравнивается по ширине */
+    nav {
+        justify-content: space-between;
+    }
+}
+
+/* ========== АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ (≤600px) ========== */
+@media (max-width: 600px) {
+    /* Главный заголовок по центру */
+    header h1 {
+        text-align: center;
+    }
+    
+    /* Меню вертикальное */
+    nav {
+        flex-direction: column; /* Элементы идут сверху вниз */
+        align-items: center; /* Выравнивание по центру поперечной оси */
+    }
+    
+    nav a {
+        font-size: 22px; /* Увеличиваем шрифт на 4px */
+    }
+    
+    /* Изображение на всю ширину */
+    .about img {
+        width: 100%;
+        height: auto;
+    }
+    
+    /* Уменьшаем шрифт таблицы */
+    table th {
+        font-size: 14px; /* -2px */
+    }
+    
+    table td {
+        font-size: 13px; /* -2px */
+    }
+}
+
+/* ========== АДАПТИВНОСТЬ ДЛЯ МАЛЕНЬКИХ МОБИЛЬНЫХ (≤400px) ========== */
+@media (max-width: 400px) {
+    /* Еще больше уменьшаем шрифт таблицы */
+    table th {
+        font-size: 12px; /* Еще -2px */
+    }
+    
+    table td {
+        font-size: 11px; /* Еще -2px */
+    }
+}
+
