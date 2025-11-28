@@ -1,0 +1,33 @@
+/* ========== СТИЛИ ДЛЯ ФИЛЬТРОВ ========== */
+
+/* Контейнер с кнопками фильтров */
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: wrap; /* Переносим на новую строку если не помещается */
+}
+
+/* Кнопка фильтра */
+.filter-btn {
+    padding: 8px 20px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: #2d7a5e; /* Зеленоватый цвет текста */
+    background-color: transparent;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover эффект */
+.filter-btn:hover {
+    background-color: #e8f5e9; /* Светло-зеленый фон */
+}
+
+/* Активный фильтр */
+.filter-btn.active {
+    background-color: #2d7a5e; /* Зеленый фон */
+    color: white; /* Белый текст */
+}
