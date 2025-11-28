@@ -1,0 +1,195 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Скрытие экранов */
+.hidden {
+    display: none !important;
+}
+
+/* Информация об уровне */
+.level-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.level-info p {
+    font-weight: bold;
+    color: #555;
+}
+
+/* Статистика */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+    padding: 15px;
+    background: #e9ecef;
+    border-radius: 10px;
+}
+
+.stats p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.stats span {
+    font-weight: bold;
+    color: #667eea;
+}
+
+/* Блок с вопросом */
+.question-box {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+#question {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Поле ввода */
+#answer-input {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s;
+}
+
+#answer-input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+/* Кнопки */
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: white;
+    background: #28a745;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background: #218838;
+}
+
+#next-level-btn {
+    background: #667eea;
+}
+
+#next-level-btn:hover {
+    background: #5568d3;
+}
+
+#restart-btn,
+#restart-from-level-btn,
+#play-again-btn {
+    background: #ffc107;
+}
+
+#restart-btn:hover,
+#restart-from-level-btn:hover,
+#play-again-btn:hover {
+    background: #e0a800;
+}
+
+#exit-btn {
+    background: #dc3545;
+}
+
+#exit-btn:hover {
+    background: #c82333;
+}
+
+/* Обратная связь */
+.feedback {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 15px;
+    min-height: 30px;
+}
+
+.feedback.correct {
+    color: #28a745;
+}
+
+.feedback.wrong {
+    color: #dc3545;
+}
+
+/* Экраны результатов */
+#level-complete-screen,
+#fail-screen,
+#victory-screen {
+    text-align: center;
+}
+
+#level-complete-screen p,
+#fail-screen p,
+#victory-screen p {
+    margin: 20px 0;
+    font-size: 1.1em;
+    color: #555;
+}
+
+#final-stats {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}

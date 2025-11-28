@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Math Game</h1>
+        
+        <!-- Игровое поле -->
+        <div id="game-screen" class="screen">
+            <div class="level-info">
+                <p>Уровень: <span id="level-name">Начальный</span></p>
+                <p>Время: <span id="timer">0:00</span></p>
+            </div>
+            
+            <div class="stats">
+                <p>Правильно: <span id="correct-count">0</span></p>
+                <p>Неправильно: <span id="wrong-count">0</span></p>
+                <p>Вопрос: <span id="question-number">1</span> из 10</p>
+            </div>
+            
+            <div class="question-box">
+                <p id="question">Loading...</p>
+            </div>
+            
+            <input type="text" id="answer-input" placeholder="Введите ваш ответ">
+            <button id="submit-btn">Отправить</button>
+            
+            <p id="feedback" class="feedback"></p>
+        </div>
+        
+        <!-- Экран перехода на следующий уровень -->
+        <div id="level-complete-screen" class="screen hidden">
+            <h2>Уровень пройден! 🎉</h2>
+            <p id="level-result"></p>
+            <button id="next-level-btn">Следующий уровень</button>
+            <button id="restart-from-level-btn">Начать заново</button>
+        </div>
+        
+        <!-- Экран провала -->
+        <div id="fail-screen" class="screen hidden">
+            <h2>Не получилось 😔</h2>
+            <p id="fail-message"></p>
+            <button id="restart-btn">Начать заново</button>
+            <button id="exit-btn">Выйти</button>
+        </div>
+        
+        <!-- Экран победы -->
+        <div id="victory-screen" class="screen hidden">
+            <h2>Поздравляем! 🏆</h2>
+            <p>Вы прошли все уровни!</p>
+            <p id="final-stats"></p>
+            <button id="play-again-btn">Играть снова</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
