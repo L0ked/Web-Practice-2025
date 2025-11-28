@@ -1,0 +1,71 @@
+/* ========== СТИЛИ ДЛЯ БЛОКА ЗАКАЗА ========== */
+
+/* Блок "Ваш заказ" */
+#order-summary {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px; /* Отступ от формы */
+}
+
+#order-summary h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 20px 0;
+}
+
+/* Пустое состояние */
+.order-empty {
+    padding: 20px 0;
+    text-align: center;
+    color: #888;
+    font-size: 16px;
+}
+
+/* Элемент заказа (суп, главное блюдо, напиток) */
+.order-item {
+    margin: 15px 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.order-item:last-of-type {
+    border-bottom: none;
+}
+
+.order-item h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+.order-item p {
+    font-size: 16px;
+    color: #555;
+    margin: 0;
+}
+
+/* Блок со стоимостью */
+.order-cost {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 2px solid tomato;
+}
+
+.order-cost h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+.order-cost p {
+    font-size: 24px;
+    font-weight: 700;
+    color: tomato;
+    margin: 0;
+}
